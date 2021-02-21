@@ -1,11 +1,10 @@
-<h1>Listing</h1>
+<h1>Listings</h1>
 
 <ul *ngIf="listings">
-  <li *ngFor="let listing of listings.data">
+  <li *ngFor="let listing of listings.data" class="wrapper">
     <p class="condition">{{ listing.condition }}</p>
     <p class="name">{{ listing.name }}</p>
     <img class="image" src="{{ listing.image_url }}">
     <p class="price">${{ listing.price }}</p>
-    <p class="post_date">{{ listing.post_date }}</p>
   </li>
 </ul>
