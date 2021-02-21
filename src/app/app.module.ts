@@ -13,6 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { SellComponent } from './sell/sell.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -30,8 +31,14 @@ import { SellComponent } from './sell/sell.component';
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
+<<<<<<< HEAD
     MatBadgeModule,
     FormsModule
+=======
+    MatMenuModule,
+    HttpClientModule,
+    MatBadgeModule
+>>>>>>> af58c3999c80ebab11592e279850240beae5ade4
   ],
   providers: [],
   bootstrap: [AppComponent]
