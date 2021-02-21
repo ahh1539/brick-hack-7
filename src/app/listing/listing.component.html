@@ -7,16 +7,16 @@
 <mat-card class= "main-card">
 
   <mat-card-header>
-    <mat-card-subtitle class="condition-text">new</mat-card-subtitle>
+    <mat-card-subtitle class="condition-text">{{condition}}</mat-card-subtitle>
 
   </mat-card-header>
   <div class="image-container">
-  <img mat-card-image src="https://image.goat.com/crop/375/attachments/product_template_pictures/images/049/583/687/original/544351_W2GA1_4452.png.png" alt="Photo of a Shiba Inu">
+  <img mat-card-image src="{{link}}" alt="Photo of a Shiba Inu">
   </div>
     <mat-card-content>
 
-    <mat-card-title>Shoes</mat-card-title>
-      <mat-card-subtitle>$</mat-card-subtitle>
+    <mat-card-title>{{name}}</mat-card-title>
+      <mat-card-subtitle>$ {{cost}}</mat-card-subtitle>
 
 
 
