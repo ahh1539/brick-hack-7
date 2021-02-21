@@ -16,10 +16,6 @@ header {
     padding: 1em 0;
     width: 100%;
 
-    button{
-        border: none;
-    }
-
     a {
         color: white;
         text-decoration: none;
@@ -31,6 +27,11 @@ header {
         display: flex;
 
         li{
+            
+            button{
+                border: none;
+                background-color: transparent;
+            }
             padding: 1em;
 
             &:hover {
