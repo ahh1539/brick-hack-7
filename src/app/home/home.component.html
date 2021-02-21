@@ -4,8 +4,8 @@
 
 
   <!-- Search form -->
-  <form class="search-container">
-    <input type="text" id="search-bar" placeholder="What are you looking for today?">
+  <form #searchForm="ngForm" (ngSubmit)="searchItems(searchForm.value)" class="search-container">
+    <input ngModel type="text" id="search-bar"  placeholder="What are you looking for today?">
     <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
   </form>
 

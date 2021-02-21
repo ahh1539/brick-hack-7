@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListingsService } from '../listings/listings.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  listings: Object;
+
+  constructor(private _listingsService: ListingsService) { }
 
   ngOnInit(): void {
+
   }
 
+  // tslint:disable-next-line:typedef
+  searchItems(query){
 
+    // tslint:disable-next-line:prefer-const
+  this._listingsService.getListings().subscribe(data => {
+  this.listings = data;
+    console.log(query);
+  });
 
+}
 }
