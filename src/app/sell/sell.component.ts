@@ -11,5 +11,9 @@ export class SellComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  makeListing(val){
+    console.log(val);
+  }
 
 }
