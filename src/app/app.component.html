@@ -1,13 +1,16 @@
 <header>
     <div class="container">
         <ul>
+            <!-- <li><button routerLink="/sell">Sell</button></li>
+            <li><button routerLink="/login">Login</button></li> -->
             <li><button routerLink="/sell">Sell</button></li>
-            <li><button routerLink="/login">Login</button></li>
+            <li><button *ngIf="loggedIn" (click)="signOut()">Log out</button></li>
+            <li><button *ngIf="!loggedIn" (click)="signInWithGoogle()">Login</button></li>
         </ul>
     </div>
 </header>
 
-<div class="container">
+<div class="container" *ngIf="loggedIn">
   <app-listing></app-listing>
     <router-outlet></router-outlet>
 </div>

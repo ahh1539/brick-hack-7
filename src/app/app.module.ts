@@ -13,7 +13,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { SellComponent } from './sell/sell.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import {GoogleLoginProvider,} from 'angularx-social-login';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,25 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatMenuModule,
     HttpClientModule,
-    MatBadgeModule
+    MatBadgeModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [CookieService,
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '1019320328256-7rd0eda6v673r6qqfngb0r5221kue8vn.apps.googleusercontent.com'
+            )
+          },
+        ]
+      } as SocialAuthServiceConfig,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
