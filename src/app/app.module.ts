@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ListingComponent } from './listing/listing.component';
 import { LoginComponent } from './login/login.component';
 import {MatBadgeModule, MatButtonModule, MatCardModule, MatIconModule, MatMenuModule} from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {MatBadgeModule, MatButtonModule, MatCardModule, MatIconModule, MatMenuMo
     MatButtonModule,
     MatBadgeModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
