@@ -1,18 +1,13 @@
-<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-    <mat-icon>more_vert</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>dialpad</mat-icon>
-      <span>Redial</span>
-    </button>
-    <button mat-menu-item disabled>
-      <mat-icon>voicemail</mat-icon>
-      <span>Check voice mail</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>notifications_off</mat-icon>
-      <span>Disable alerts</span>
-    </button>
-  </mat-menu>
-<app-listing></app-listing>
+<header>
+    <div class="container">
+        <ul>
+            <li><button routerLink="/sell">Sell</button></li>
+            <li><button routerLink="/login">Login</button></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+  <app-listing></app-listing>
+    <router-outlet></router-outlet>
+</div>

@@ -1,22 +1,35 @@
 
 *{
+  font-family: 'Montserrat', sans-serif;
+}
 
+mat-card:hover{
+  box-shadow: 5px 5px 5px #333;
 }
 
 .main-card{
 
-    max-width: 300px;
-    box-shadow: 1px 2px 5px #333;
-    margin-bottom: 1em;
+  max-width: 300px;
+  box-shadow: 1px 2px 5px #333;
+  margin-bottom: 1em;
 
-    .image-container{
+  .image-container{
 
-        padding: 2em;
+    padding: 2em;
 
+  }
+
+  mat-card-title{
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5em;
+  }
+  mat-card-content{
+    text-align: center;
+
+    mat-card-subtitle{
+
+      font-size: 1.4em;
     }
-
-    mat-card-title{
-        font-weight: 900;
-        text-align: center;
-    }
+  }
 }
