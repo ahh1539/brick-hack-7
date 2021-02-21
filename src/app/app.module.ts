@@ -11,13 +11,15 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
+import { SellComponent } from './sell/sell.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ListingComponent,
-    LoginComponent
+    LoginComponent,
+    SellComponent
   ],
   imports: [
     BrowserModule,
