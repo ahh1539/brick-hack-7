@@ -5,10 +5,6 @@
     --primary: rgb(247, 105, 2);
     --primary2: rgb(255, 255, 255);
     --secondary: rgb(00, 00, 00);
-    --secondary2: rgb(208, 211, 212);   
+    --secondary2: rgb(208, 211, 212);
 }
 
-body {
-    background: linear-gradient(180deg, var(--primary) 3%, var(--secondary2), var(--primary2) 100%);
-    background-repeat: no-repeat;
-}
