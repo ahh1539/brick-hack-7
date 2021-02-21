@@ -36,10 +36,10 @@ import { CookieService } from 'ngx-cookie-service';
     MatMenuModule,
     HttpClientModule,
     MatBadgeModule,
-    SocialLoginModule
+    SocialLoginModule,
+    FormsModule
   ],
   providers: [CookieService,
-    FormsModule,
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {

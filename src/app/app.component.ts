@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
 
   signOut(): void {
     this.authService.signOut();
-    this.cookieService.set('loggedIn', 'false')
+    this.cookieService.deleteAll();
     this.loggedIn = false;
   }
 
@@ -38,7 +38,9 @@ export class AppComponent implements OnInit {
       this.user = user;
       if (user != null || this.cookieService.get('loggedIn') == 'true') {
         this.loggedIn = true;
-        this.cookieService.set('loggedIn', 'true')
+        this.cookieService.set('loggedIn', 'true');
+        this.cookieService.set('email', user.email);
+
       }
     });
   }

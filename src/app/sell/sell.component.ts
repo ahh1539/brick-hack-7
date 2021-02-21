@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ListingsService } from '../listings/listings.service';
+import { CookieService } from 'ngx-cookie-service';
+
 
 @Component({
   selector: 'app-sell',
@@ -7,13 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SellComponent implements OnInit {
 
-  constructor() { }
+  constructor(private listingsService: ListingsService, private cookieService: CookieService) { }
 
   ngOnInit(): void {
   }
   
   makeListing(val){
-    console.log(val);
+    if (this.cookieService.get('email')) {
+      val.poster_email = this.cookieService.get('email');
+      this.listingsService.createListing(val).subscribe(data => {
+        console.log(data);
+      });
+    }
   }
 
 }
