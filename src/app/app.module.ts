@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { SellComponent } from './sell/sell.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     ListingComponent,
     LoginComponent,
-    SellComponent
+    SellComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
