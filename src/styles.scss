@@ -1,3 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
-@import '~@angular/material/prebuilt-themes/indigo-pink.css'; 
+
+:root{
+    --primary: rgb(247, 105, 2);
+    --primary2: rgb(255, 255, 255);
+    --secondary: rgb(00, 00, 00);
+    --secondary2: rgb(208, 211, 212);   
+}

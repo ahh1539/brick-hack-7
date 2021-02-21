@@ -14,16 +14,22 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { SellComponent } from './sell/sell.component';
 import { HttpClientModule } from '@angular/common/http';
+<<<<<<< HEAD
+import { HomeComponent } from './home/home.component';
+
+=======
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import {GoogleLoginProvider,} from 'angularx-social-login';
 import { CookieService } from 'ngx-cookie-service';
+>>>>>>> 28884f41f0f9753e96021ee432aa6e5781f998cf
 
 @NgModule({
   declarations: [
     AppComponent,
     ListingComponent,
     LoginComponent,
-    SellComponent
+    SellComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
