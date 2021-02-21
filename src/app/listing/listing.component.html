@@ -1,10 +1,11 @@
 <h1>Listings</h1>
 
 <ul *ngIf="listings">
-  <li *ngFor="let listing of listings.data" class="wrapper">
+  <li *ngFor="let listing of listings.data" class="wrapper tooltip">
     <p class="condition">{{ listing.condition }}</p>
     <p class="name">{{ listing.name }}</p>
     <img class="image" src="{{ listing.image_url }}">
     <p class="price">${{ listing.price }}</p>
+    <span class="tooltiptext">Contact: {{ listing.poster_email }}</span>
   </li>
 </ul>
