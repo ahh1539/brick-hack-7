@@ -1,35 +1,60 @@
-
-*{
-  font-family: 'Montserrat', sans-serif;
+h1 {
+  font-family: Nunito, sans-serif;
 }
 
-mat-card:hover{
-  box-shadow: 5px 5px 5px #333;
-}
+ul {
+  font-family: Nunito, sans-serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 
-.main-card{
+  li {
+      background: rgb(238, 238, 238);
+      padding: 1em;
+      margin-right: 10px;
+      width: 20%;
+      height: 200px;
+      margin-bottom: 1em;
+      display: flex;
+      flex-direction: column;
 
-  max-width: 300px;
-  box-shadow: 1px 2px 5px #333;
-  margin-bottom: 1em;
+      img {
+        margin-left: 15%;
+        margin-top: 15%;
+        height: 60%;
+        width: 60%;
+      }
 
-  .image-container{
+      p {
+          margin: 0;
+      }
 
-    padding: 2em;
-
-  }
-
-  mat-card-title{
-    font-weight: bold;
-    text-align: center;
-    padding: 0.5em;
-  }
-  mat-card-content{
-    text-align: center;
-
-    mat-card-subtitle{
-
-      font-size: 1.4em;
-    }
+      p.name {
+          font-weight: bold;
+          font-size: 1.2rem;
+          float: right;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 70%;
+      }
+      p.price {
+          text-transform: uppercase;
+          font-size: .9rem;
+          flex-grow: 1;
+      }
+      p.condition {
+        text-transform: uppercase;
+        float:left;
+        font-size: .9rem;
+        flex-grow: 1;
+      }
+      p.post_date {
+        text-transform: uppercase;
+        font-size: .9rem;
+        flex-grow: 1;
+      }
   }
 }

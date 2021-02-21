@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Listing } from '../models/listing';
 
 const baseUrl = 'http://localhost:8080';
 

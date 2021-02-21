@@ -14,21 +14,16 @@ export class ListingComponent implements OnInit {
   condition: string = '';
   link: string;
 
-  listings;
+  listings: Object;
 
-  constructor(private listingsService: ListingsService) { }
+  constructor(private _listingsService: ListingsService) { }
 
   ngOnInit(): void {
 
-    this.listingsService.getListings().subscribe(data => {
+    this._listingsService.getListings().subscribe(data => {
       this.listings = data;
-      console.log(this.listings);
     });
 
-    this.condition = 'new';
-    this.cost = 2000;
-    this.name = 'balenciaga X Predator';
-    this.link = 'https://image.goat.com/crop/375/attachments/product_template_pictures/images/049/583/687/original/544351_W2GA1_4452.png.png';
   }
 
 }

@@ -1,26 +1,11 @@
+<h1>Listing</h1>
 
-<div *ngIf="listings && listings.data">
-  <mat-card class= "main-card" *ngFor="let listing of listings.data">
-
-    <mat-card-header>
-      <mat-card-subtitle class="condition-text">{{listing.condition}}</mat-card-subtitle>
-
-    </mat-card-header>
-    <div class="image-container">
-      <div *ngIf="listing.image_url">
-        <img mat-card-image src="{{listing.image_url}}" alt="Photo of a Shiba Inu">
-      </div>
-      <div *ngIf="!listing.image_url">
-        <img mat-card-image src="{{link}}" alt="Photo of a Shiba Inu">
-      </div>
-    </div>
-      <mat-card-content>
-
-      <mat-card-title>{{listing.name}}</mat-card-title>
-        <mat-card-subtitle>$ {{listing.price}}</mat-card-subtitle>
-
-      </mat-card-content>
-  </mat-card>
-</div>
-
-
+<ul *ngIf="listings">
+  <li *ngFor="let listing of listings.data">
+    <p class="condition">{{ listing.condition }}</p>
+    <p class="name">{{ listing.name }}</p>
+    <img class="image" src="{{ listing.image_url }}">
+    <p class="price">${{ listing.price }}</p>
+    <p class="post_date">{{ listing.post_date }}</p>
+  </li>
+</ul>
