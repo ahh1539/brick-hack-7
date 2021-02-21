@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <header>
     <div class="container">
         <ul>
@@ -10,3 +11,23 @@
 <div class="container">
     <router-outlet></router-outlet>
 </div>
+=======
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voice mail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu>
+<app-listing></app-listing>
+>>>>>>> fb61420095b2b5906af9bc28a6353c4aa3aeed43
