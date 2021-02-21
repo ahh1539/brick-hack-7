@@ -1,1 +1,16 @@
-<p>sell works!</p>
+<h1>Sell</h1>
+<form #sellForm="ngForm" (ngSubmit)=makeListing(sellForm.value)>
+    <input type="text" ngModel name="item-name" placeholder="Item for sale">
+    <input type="number" ngModel min="0.00" step="0.01" max="2500" name="price" placeholder="Price">
+    <input type="text" ngModel name="description" placeholder="Item details">
+    <label for="img">Select image:</label>
+    <input type="file" id="img" name="img" accept="image/*">
+    <select name="condition" ngModel size="3">
+        <option value="new">New</option>
+        <option value="great">Great</option>
+        <option value="good">Good</option>
+        <option value="used">Used</option>
+        <option value="poor">Poor</option>
+      </select>
+    <button>Sell!</button>
+</form>
