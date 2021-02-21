@@ -1,6 +1,6 @@
 <h1>Sell</h1>
 <form #sellForm="ngForm" (ngSubmit)=makeListing(sellForm.value)>
-    <input type="text" ngModel name="item-name" placeholder="Item for sale">
+    <input type="text" ngModel name="name" placeholder="Item for sale">
     <input type="number" ngModel min="0.00" step="0.01" max="2500" name="price" placeholder="Price">
     <input type="text" ngModel name="description" placeholder="Item details">
     <label for="img">Select image:</label>

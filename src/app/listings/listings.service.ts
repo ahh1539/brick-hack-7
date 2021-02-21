@@ -15,6 +15,11 @@ export class ListingsService {
     return this.http.get(baseUrl + '/api/items');
   }
 
+  createListing(listingData) {
+    console.log(listingData);
+    return this.http.post('http://localhost:8080/api/items', listingData);
+  }
+
   // private async request(method: string, url: string, data?: any) {
 
   //   console.log('request ' + JSON.stringify(data));
@@ -34,11 +39,6 @@ export class ListingsService {
 
   // getListing(id: string) {
   //   return this.request('get', `${baseUrl}/items/${id}`);
-  // }
-
-  // createListing(listing: Listing) {
-  //   console.log('createProduct ' + JSON.stringify(listing));
-  //   return this.request('post', `${baseUrl}/items`, listing);
   // }
 
   // updateListing(listing: Listing) {

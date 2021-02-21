@@ -15,7 +15,6 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { SellComponent } from './sell/sell.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
-
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import {GoogleLoginProvider,} from 'angularx-social-login';
 import { CookieService } from 'ngx-cookie-service';

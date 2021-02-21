@@ -3,29 +3,12 @@
         <div class="container">
             <ul>
                 <li><button routerLink="/sell">Sell</button></li>
-                <li><button routerLink="/login">Login</button></li>
+                <li><button *ngIf="loggedIn" (click)="signOut()">Log out</button></li>
+                <li><button *ngIf="!loggedIn" (click)="signInWithGoogle()">Login</button></li>
             </ul>
         </div>
     </header>
 
-    <div class="container">
-<<<<<<< HEAD
-        <router-outlet></router-outlet>
-    </div>
-</html>
-=======
-        <ul>
-            <!-- <li><button routerLink="/sell">Sell</button></li>
-            <li><button routerLink="/login">Login</button></li> -->
-            <li><button routerLink="/sell">Sell</button></li>
-            <li><button *ngIf="loggedIn" (click)="signOut()">Log out</button></li>
-            <li><button *ngIf="!loggedIn" (click)="signInWithGoogle()">Login</button></li>
-        </ul>
-    </div>
-</header>
-
 <div class="container" *ngIf="loggedIn">
-  <app-listing></app-listing>
     <router-outlet></router-outlet>
 </div>
->>>>>>> 28884f41f0f9753e96021ee432aa6e5781f998cf

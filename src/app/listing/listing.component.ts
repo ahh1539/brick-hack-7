@@ -16,8 +16,6 @@ export class ListingComponent implements OnInit {
 
   listings;
 
-
-
   constructor(private listingsService: ListingsService) { }
 
   ngOnInit(): void {
