@@ -14,7 +14,7 @@ export class ListingComponent implements OnInit {
   condition: string = '';
   link: string;
 
-  listings: Object;
+  listings;
 
 
 
