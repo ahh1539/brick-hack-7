@@ -3,16 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppListingComponent } from './app-listing/app-listing.component';
+import { ListingComponent } from './listing/listing.component';
+import { LoginComponent } from './login/login.component';
+import {MatBadgeModule, MatButtonModule, MatCardModule} from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppListingComponent
+    ListingComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCardModule,
+    MatButtonModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
