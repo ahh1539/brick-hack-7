@@ -23,7 +23,9 @@ export class HomeComponent implements OnInit {
   this._listingsService.getListings().subscribe(data => {
   this.listings = data;
     console.log(query);
-  });
+    }); 
+
+    console.log(this.listings);
 
 }
 }
